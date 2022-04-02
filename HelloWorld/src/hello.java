@@ -2,16 +2,15 @@ import java.util.Scanner;
 
 public class hello {
 	public static void main(String[] arge) {
-//		int x = 30;
-//		x = 40;
-//		final int y = 40;
-//		System.out.println(x);
-//		System.out.println(y);
-		Scanner z = new Scanner(System.in);
-		
-		String str = z.next();
-		int i = z.nextInt();
-		long l = z.nextLong();
-		System.out.println(str);
+        String name = "코드잇";
+        int year = 2015;
+        int month = 7;
+        int day = 20;
+        boolean married = false;
+        
+        System.out.printf("이름: %s\n",name);
+        System.out.printf("생일: %d년 %d월 %d일\n",year,month,day);
+        System.out.printf("결혼: %s\n",married);
+        System.out.println("이름: "+ name);
 	}
 }
