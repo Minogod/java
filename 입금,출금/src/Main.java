@@ -2,33 +2,38 @@
 public class Main {
 
 	public static void main(String[] args) {
-		//∞Ì∞¥ µÓ∑œ
+		//∞Ì∞¥ 1
 		Person p1 = new Person();
-		p1.name = "±ËΩ≈¿«";
-		p1.age = 28;
-		p1.cashAmount = 30000;
-		
+		p1.setName("±ËΩ≈¿«");
+		p1.setAage(28);
+		p1.setcashAmount(30000);
+		//∞Ì∞¥ 2
 		Person p2 = new Person();
-		p2.name = "±ËπŒ»£";
-		p2.age = 30;
-		p2.cashAmount = 100000;
+		p2.setName("±ËπŒ»£");
+		p2.setAage(30);
+		p2.setcashAmount(100000);
 		
-		// ¿∫«‡ ∞Ë¡¬ ª˝º∫
+		//∞Ì∞¥1 ¿∫«‡∞Ë¡¬
         BankAccount a1 = new BankAccount();
-        a1.balance = 100000;
-        p1.account = a1;
-        a1.owner = p1;
+        a1.setBalance(100000);
+        p1.setAccount(a1);
+        a1.setOwner(p1);
         
+        //∞Ì∞¥2 ¿∫«‡∞Ë¡¬
         BankAccount a2 = new BankAccount();
-        a2.balance = 500000;
-        p2.account = a2;
-        a2.owner = p2;
+        a2.setBalance(500000);
+        p2.setAccount(a2);
+        a2.setOwner(p2);
         
         
-        System.out.println(a2.deposit(30000));
-        System.out.println(a2.withdraw(170000));
-        System.out.println(a2.deposit(620000));
-        System.out.println(a2.withdraw(890000));
+//        System.out.println(a2.deposit(30000));
+//        System.out.println(a2.withdraw(170000));
+//        System.out.println(a2.deposit(620000));
+//        System.out.println(a2.withdraw(890000));
+        a2.transfer(a1, 200000);
+        a1.transfer(p2, 150000);
+        p2.transfer(a1, 270000);
+        p1.transfer(p2, 130000);
 	}
 
 }
