@@ -3,6 +3,29 @@ public class BankAccount {
 	private int balance; // 계좌 잔고
 	private Person owner; // 계좌 주인연결
 	
+	//계좌 생성자
+	public BankAccount(int pBalance) {
+	    if (pBalance < 0) {
+	        balance = 0;
+	    } else {
+	        balance = pBalance;
+	    }
+	}
+	public BankAccount(Person pOwner) {
+	    owner = pOwner;
+	    balance = 0;
+	}
+	public BankAccount(int pBalance, Person pOwner) {
+	    if (pBalance < 0) {
+	        balance = 0;
+	    } else {
+	        balance = pBalance;
+	    }
+	    owner = pOwner;
+	}
+	
+	
+	
 	//balance 접근제어자
 	public void setBalance(int newBalance) {
 		if (newBalance >0){

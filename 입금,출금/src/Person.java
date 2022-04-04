@@ -10,19 +10,48 @@ public class Person {
 	private int cashAmount; // 고객 현금잔액
 	private BankAccount account; // 고객 계좌연결
 	
-	//name 접근제어자
+	// 고객 생성자
+	public Person(String pName, int pAge) {
+	    if (pAge<0){
+	    	age = 12;
+	    }else {
+		    age = pAge;
+	    }
+		name = pName;
+	    cashAmount = 0;
+	}
+	public Person(String pName, int pAge, int pCashAmount) {
+	    if (pAge<0){
+	    	age = 12;
+	    }else {
+		    age = pAge;
+	    }
+	    if (pCashAmount<0){
+	    	cashAmount = 0;
+	    }else {
+	    	cashAmount = pCashAmount;
+	    }
+	    name = pName;
+	}
+	
+	
+	
+	
+	
+	
+	//name 접근제어자 Setter
 	public void setName(String newName) {
 		if (true){
 			name = newName;
 		}
 	}
-	
+	//name 접근제어자 Getter
 	public String getName() {
 		return name;
 	}
 	
 	//Age 접근제어자
-	public void setAage(int newAge) {
+	public void setAge(int newAge) {
 		if (newAge>0) {
 			age = newAge;
 		}
